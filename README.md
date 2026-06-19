@@ -1,114 +1,222 @@
-# Career Roadmap Generator
+# 🚀 AI Career Roadmap Generator
 
-An AI-powered application that generates personalized career roadmaps to help professionals transition between roles and advance their careers.
+An AI-powered web application that generates personalized career roadmaps based on a user's current skills, target role, and learning commitment. The platform uses Large Language Models (LLMs) to provide structured learning paths, project recommendations, certifications, interview preparation guidance, and career growth strategies.
 
-## Overview
+---
 
-This full-stack application combines a FastAPI backend with a React frontend to create comprehensive, actionable career roadmaps based on user input including current role, skills, target role, and time commitment.
+##  Features
 
-## Features
+- 🔐 User Authentication (Register/Login)
+- 🤖 AI-Powered Career Roadmap Generation
+- 📚 Personalized Learning Paths
+- 🛠️ Project Recommendations
+- 🏆 Certification Suggestions
+- 💼 Interview Preparation Guidance
+- 📊 Skill Gap Analysis
+- 📝 Roadmap History Management
+- 🗑️ Delete Saved Roadmaps
+- 📄 Export Roadmap as PDF
+- 🎨 Responsive User Interface
 
-- **Personalized Roadmaps**: AI-generated career paths tailored to individual profiles
-- **Skill Gap Analysis**: Detailed comparison of current vs target role requirements
-- **Learning Resources**: Curated courses, books, and certification recommendations
-- **Portfolio Projects**: Hands-on project suggestions with real-world applications
-- **Timeline Planning**: Monthly milestones and measurable goals
-- **Market Insights**: Salary expectations and industry trends
+---
 
-## Tech Stack
-
-### Backend
-- FastAPI (Python web framework)
-- Groq AI (Language model integration)
-- Uvicorn (ASGI server)
-- Pydantic (Data validation)
+##  Tech Stack
 
 ### Frontend
-- React 18 (UI framework)
-- Vite (Build tool)
-- Modern CSS3 (Styling)
+- React.js
+- Vite
+- CSS3
+- React Markdown
+- Remark GFM
 
-## Quick Start
+### Backend
+- FastAPI
+- Python
+- JWT Authentication
+- Bcrypt
 
-### Prerequisites
-- Python 3.8+
-- Node.js 16+
-- Groq API key
+### Database
+- MongoDB
 
-### Backend Setup
+### AI Integration
+- Groq API
+- Llama 3.3 70B Versatile Model
+
+---
+
+##  Project Structure
+
+```text
+AI-Career-Roadmap-Generator
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── backend/
+│   ├── main.py
+│   ├── prompt.py
+│   ├── requirements.txt
+│   └── .env
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️ Clone Repository
+
+```bash
+git clone https://github.com/divy686/ai-career-roadmap-generator.git
+cd ai-career-roadmap-generator
+```
+
+### 2️ Backend Setup
+
 ```bash
 cd backend
 python -m venv .venv
-.venv\Scripts\activate  # Windows
-source .venv/bin/activate  # macOS/Linux
-pip install -r requirement.txt
 ```
 
-Create `.env` file:
+Activate Environment
+
+Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Create `.env` file
+
 ```env
-GROQ_API_KEY=your_api_key_here
+MONGO_URI=your_mongodb_connection_string
+GROQ_API_KEY=your_groq_api_key
+JWT_SECRET=your_secret_key
 ```
 
-Start backend:
+Run Backend
+
 ```bash
 uvicorn main:app --reload
 ```
 
-### Frontend Setup
+Backend will run on:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+### 3️ Frontend Setup
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-## Project Structure
+Frontend will run on:
 
-```
-career-roadmap/
-├── backend/
-│   ├── main.py          # FastAPI application
-│   ├── prompt.py        # AI prompt templates
-│   ├── requirement.txt  # Python dependencies
-│   ├── .env            # Environment variables
-│   └── README.md       # Backend documentation
-├── frontend/
-│   ├── src/            # React source code
-│   ├── public/         # Static assets
-│   ├── package.json    # Node.js dependencies
-│   └── README.md       # Frontend documentation
-├── .gitignore          # Git ignore rules
-└── README.md           # This file
+```text
+http://localhost:5173
 ```
 
-## API Endpoints
+---
 
-- `GET /` - Health check
-- `POST /generate-roadmap` - Generate career roadmap
+##  Usage
 
-## Development
+1. Register a new account.
+2. Login securely.
+3. Enter:
+   - Current Role
+   - Current Skills
+   - Target Role
+   - Weekly Learning Hours
+4. Generate a personalized roadmap.
+5. View and manage saved roadmaps.
+6. Export roadmap as PDF.
 
-### Backend Development
-- API documentation: `http://localhost:8000/docs`
-- Follow PEP 8 guidelines
-- Use type hints
+---
 
-### Frontend Development
-- Development server: `http://localhost:5173`
-- Follow React best practices
-- Use functional components with hooks
+##  Screenshots
 
-## Contributing
+### Login Page
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+(Add Screenshot Here)
 
-## License
+### Dashboard
 
-This project is licensed under the MIT License.
+(Add Screenshot Here)
 
-## Support
+### Generated Roadmap
 
-For questions or issues, please open a GitHub issue or contact the development team.
+(Add Screenshot Here)
+
+---
+
+##  Example Input
+
+```text
+Current Role: Student
+Current Skills: Python, HTML, CSS
+Target Role: Data Scientist
+Time Commitment: 15 Hours/Week
+```
+
+---
+
+##  Example Output
+
+- Skill Gap Analysis
+- Learning Roadmap
+- Recommended Projects
+- Certifications
+- Interview Preparation Plan
+- Salary Insights
+
+---
+
+##  Security Features
+
+- Password Hashing using Bcrypt
+- JWT-Based Authentication
+- Protected User Data
+- Secure API Communication
+
+---
+
+##  Future Enhancements
+
+- Dark/Light Theme Toggle
+- Roadmap Download as DOCX
+- AI Chat Career Mentor
+- Learning Progress Tracker
+- Job Recommendation Engine
+- Resume Analyzer
+
+---
+
+##  Author
+
+**Divya Rana**
+
+Student at Jaypee University, Anoopshahr
+
+Passionate about Web Development, Artificial Intelligence, Machine Learning, and Data Science.
+
+Focused on building real-world full-stack and AI-powered applications.
+---
+
+##  License
+
+This project is developed for educational and portfolio purposes.
