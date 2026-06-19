@@ -154,7 +154,7 @@ http://localhost:5173
 ![Login Page](images/login-page.png)
 
 ### Dashboard
-![Dashboard](images/dashboard.png)
+![Dashboard](images/dashboard_.png)
 
 ### Generated Roadmap
 ![Roadmap](images/roadmap-output.png)
