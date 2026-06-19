@@ -151,17 +151,13 @@ http://localhost:5173
 ##  Screenshots
 
 ### Login Page
-
-(Add Screenshot Here)
+![Login Page](screenshots/login-page.png)
 
 ### Dashboard
-
-(Add Screenshot Here)
+![Dashboard](screenshots/dashboard.png)
 
 ### Generated Roadmap
-
-(Add Screenshot Here)
-
+![Roadmap](screenshots/roadmap-output.png)
 ---
 
 ##  Example Input
