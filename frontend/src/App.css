@@ -1,0 +1,188 @@
+:root {
+  --bg-darker: #0b0f19;
+  --bg-surface: #151b26;
+  --bg-input: #1f293d;
+  --accent-neon: #38bdf8;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-slate: #2d3748;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-darker);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Authentication Screen Module Styling */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #020b1f;
+}
+
+.auth-card {
+  background: var(--bg-surface);
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--border-slate);
+  text-align: center;
+}
+.auth-card input {
+  width: 90%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-slate);
+  border-radius: 6px;
+  color: white;
+}
+.auth-card button {
+  width: 97%;
+  padding: 0.8rem;
+  background: var(--accent-neon);
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.auth-card span {
+  display: block;
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* Dashboard Splitted View Layout Grid */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  height: 100vh;
+}
+
+.sidebar {
+  background: var(--bg-surface);
+  border-right: 1px solid var(--border-slate);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar-branding h3 { margin: 0; color: var(--accent-neon); }
+.user-tag { font-size: 0.8rem; color: var(--text-secondary); }
+
+.history-list {
+  margin-top: 2rem;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.new-roadmap-btn {
+  width: 100%;
+  padding: 0.6rem;
+  background: transparent;
+  border: 1px dashed var(--accent-neon);
+  color: var(--accent-neon);
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.history-item {
+  padding: 0.75rem;
+  background: var(--bg-input);
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.history-item:hover { border-color: var(--accent-neon); }
+.history-item h4 { margin: 0; font-size: 0.95rem; }
+.history-item small { color: var(--text-secondary); }
+
+.logout-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Main Display Application Panel */
+.main-content {
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+.form-card {
+  background: var(--bg-surface);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-slate);
+}
+.form-group {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label { margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-secondary); }
+.form-group input, .form-group select {
+  padding: 0.75rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-slate);
+  color: white;
+  border-radius: 6px;
+}
+.submit-btn {
+  background: var(--accent-neon);
+  padding: 0.75rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Markdown Execution Layer Table Rules */
+.markdown-render-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+.markdown-render-body th, .markdown-render-body td {
+  border: 1px solid var(--border-slate);
+  padding: 0.75rem;
+}
+.markdown-render-body th { background: var(--bg-input); color: var(--accent-neon); }
+
+.output-controls { display: flex; gap: 1rem; margin-bottom: 2rem; }
+.back-btn, .print-btn { padding: 0.5rem 1rem; border-radius: 4px; border: none; cursor: pointer; font-weight: bold; }
+.print-btn { background: #10b981; color: white; }
+
+/* Native Printing Configurations */
+@media print {
+  .sidebar, .output-controls { display: none !important; }
+  .dashboard-layout { display: block; }
+  body { background: white; color: black; }
+  .markdown-render-body th { background: #f1f5f9; color: black; }
+}
+
+.delete-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 6px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
